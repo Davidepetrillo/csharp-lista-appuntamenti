@@ -22,7 +22,7 @@ namespace ListaAppuntamenti
 
             if(dataEOraDellAppuntamento < DateTime.Now)
             {
-                throw new InvalidDataException("La data dell'appuntamento non può essere precedente alla data di oggi");
+                throw new InvalidDataException("La data dell'appuntamento è precedente alla data di oggi. Mi dispiace ma non posso aggiungerlo alla tua agenda");
             }
             this.dataEOraDellAppuntamento = dataEOraDellAppuntamento;
         }
@@ -55,6 +55,7 @@ namespace ListaAppuntamenti
             return nuovaDataEOra;
         }
 
+        // metodo per cambiare la data
         public void CambioDataDellAppuntamento (DateTime nuovaDataAppuntamento)
         {
             if (nuovaDataAppuntamento < DateTime.Now)
@@ -64,6 +65,7 @@ namespace ListaAppuntamenti
             this.dataEOraDellAppuntamento = nuovaDataAppuntamento;
         }
 
+        // metodo per stampare a schermo gli appuntamenti
         public void ToString()
         {
             Console.WriteLine();

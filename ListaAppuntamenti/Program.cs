@@ -2,18 +2,11 @@
 
 List<Appuntamento> listaAppuntamenti = new List<Appuntamento>();
 
-Console.WriteLine("Vuoi aggiungere un appuntamento alla tua agenda? [Si/No]");
-string RispostaUtente = Console.ReadLine();
+Console.WriteLine("Quanti appuntamenti vuoi aggiungere alla tua agenda?");
+int numeroDiAppuntamentiAggiuntiDallUtente = int.Parse(Console.ReadLine());
 
-if (RispostaUtente == "Si") 
-
-{
-    Console.WriteLine("Quanti appuntamenti vuoi aggiungere alla tua agenda?");
-    int numeroDiAppuntamentiAggiuntiDallUtente = int.Parse(Console.ReadLine());
-
-    for (int i = 0; i < numeroDiAppuntamentiAggiuntiDallUtente; i++)
+for (int i = 0; i < numeroDiAppuntamentiAggiuntiDallUtente; i++)
     {
-
         Console.WriteLine();
         Console.Write("Inserisci il nome del tuo appuntamento: ");
         string nomeDellAppuntamento = Console.ReadLine();
@@ -34,12 +27,10 @@ if (RispostaUtente == "Si")
         }
     }
 
-    foreach (Appuntamento appuntamentoAggiuntoAllaLista in listaAppuntamenti)
-    {
+foreach (Appuntamento appuntamentoAggiuntoAllaLista in listaAppuntamenti)
+        {
         appuntamentoAggiuntoAllaLista.ToString();
-    }
+        }
 
-} else if ( RispostaUtente == "No")
-           {
 
-           }
+           
